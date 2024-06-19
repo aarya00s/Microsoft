@@ -1119,8 +1119,8 @@ img {
   }
 }
 .blog-card {
-  width: 25vh;
-  height: 35vh;
+  width: 100%; /* Ensure the cards take full width of their grid cell */
+  height: auto; /* Adjust the height as needed */
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   overflow: hidden;
@@ -1128,9 +1128,11 @@ img {
   position: relative;
 }
 .blog-cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Adjust the gap between the cards */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  grid-gap: 20px; /* Adjust the gap between the cards */
+  padding: 20px; /* Add some padding around the grid */
+  justify-items: center; /* Center the cards horizontally */
 }
 .blog-card:hover .header-walls {
   height: 100vh;
